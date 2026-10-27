@@ -1,0 +1,65 @@
+
+/* WDD 231 Course Home Page — Larger Screens */
+
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.65rem 1rem;
+    }
+
+    main {
+        width: min(100% - 3rem, 1100px);
+        margin: 2rem auto;
+    }
+
+    .home-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .about {
+        grid-column: 1;
+    }
+
+    .photo {
+        grid-column: 2;
+    }
+
+    .certificate {
+        grid-column: 1 / -1;
+    }
+
+    .course-filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .course-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .course-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
