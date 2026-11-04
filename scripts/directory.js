@@ -1,10 +1,13 @@
 const directoryContainer = document.querySelector("#directory-container");
+const isInChamberFolder = window.location.pathname.includes("/chamber/");
 const gridButton = document.querySelector("#grid-view");
 const listButton = document.querySelector("#list-view");
 
 async function getMembers() {
     try {
-       const response = await fetch("chamber/members.json");
+       const response = await fetch(
+    isInChamberFolder ? "members.json" : "chamber/members.json"
+);
 
         if (!response.ok) {
             throw new Error("Unable to load business members.");
@@ -27,7 +30,7 @@ function displayMembers(members) {
         card.classList.add("member-card");
 
         card.innerHTML = `
-            <img src="${member.image}" alt="${member.name} logo" loading="lazy">
+            <img src="${isInChamberFolder ? "../" : ""}${member.image}" alt="${member.name} logo" loading="lazy">
             <h2>${member.name}</h2>
             <p>${member.address}</p>
             <p>${member.phone}</p>

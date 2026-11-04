@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore businesses and members of the Chamber of Commerce directory.">
+    <meta name="author" content="Ewoh Benjamin Friday">
+
+    <title>Chamber of Commerce | Business Directory</title>
+
+    <link rel="stylesheet" href="../styles/small.css">
+<link rel="stylesheet" href="../styles/larger.css">
+
+<script src="../scripts/navigation.js" defer></script>
+<script src="../scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="../images/logo.svg" alt="" width="50" height="50">
+            <span>Ewoh Benjamin Friday</span>
+        </div>
+
+        <button id="menu-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-nav">
+            &#9776;
+        </button>
+
+        <nav id="primary-nav" aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="index.html" class="active" aria-current="page">Chamber</a>
+            <a href="../final.html">Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Chamber of Commerce Directory</h1>
+
+        <p class="directory-intro">
+            Discover local businesses and organizations in our
+            Chamber of Commerce community.
+        </p>
+
+        <section class="directory-section" aria-labelledby="directory-heading">
+            <h2 id="directory-heading">Our Members</h2>
+
+            <div class="view-controls" aria-label="Directory display options">
+                <button type="button" id="grid-view" aria-pressed="true">
+                    Grid View
+                </button>
+
+                <button type="button" id="list-view" aria-pressed="false">
+                    List View
+                </button>
+            </div>
+
+            <p id="directory-status" aria-live="polite">
+                Loading chamber members...
+            </p>
+
+            <div id="directory-container" class="directory-grid">
+                <!-- Member cards will be created using JavaScript. -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ewohbenjaminf"
+                target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <a href="https://www.linkedin.com/"
+                target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+
+        <p>
+            &copy; <span id="current-year"></span>
+            Ewoh Benjamin Friday | Nigeria
+        </p>
+
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
