@@ -1,14 +1,14 @@
-
-// WDD 231 — Responsive Navigation
+// WDD 231 - Responsive Navigation
 
 const menuButton = document.querySelector("#menu-button");
-const primaryNav = document.querySelector("#primary-nav");
+const primaryNav = document.querySelector("#nav-menu, #primary-nav");
 
 if (menuButton && primaryNav) {
     menuButton.addEventListener("click", () => {
         const isOpen = primaryNav.classList.toggle("open");
 
         menuButton.setAttribute("aria-expanded", String(isOpen));
+
         menuButton.setAttribute(
             "aria-label",
             isOpen ? "Close navigation menu" : "Open navigation menu"

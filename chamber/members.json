@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "name": "Port Harcourt Technologies",
+      "address": "12 Aba Road, Port Harcourt, Nigeria",
+      "phone": "+234 803 000 0001",
+      "website": "https://example.com",
+      "image": "images/technology.svg",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Rivers Business Solutions",
+      "address": "25 Olu Obasanjo Road, Port Harcourt, Nigeria",
+      "phone": "+234 803 000 0002",
+      "website": "https://example.com",
+      "image": "images/business.svg",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Niger Delta Logistics",
+      "address": "8 Trans Amadi Industrial Layout, Port Harcourt, Nigeria",
+      "phone": "+234 803 000 0003",
+      "website": "https://example.com",
+      "image": "images/logistics.svg",
+      "membershipLevel": "Bronze"
+    }
+  ]
+}

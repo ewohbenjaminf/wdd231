@@ -59,6 +59,7 @@ nav {
     display: none;
     flex-basis: 100%;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 nav.open {
@@ -66,10 +67,12 @@ nav.open {
 }
 
 nav a {
-    padding: 0.75rem;
+    display: block;
+    padding: 0.75rem 1rem;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
+    white-space: nowrap;
 }
 
 nav a:hover,
@@ -200,4 +203,103 @@ footer a {
 
 footer p {
     margin: 0.75rem 0 0;
+}
+/* Chamber Directory - Mobile Styles */
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.view-buttons button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background: #ffffff;
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-buttons button.active,
+.view-buttons button:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.member-card {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--surface-color);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.member-card h2 {
+    font-size: 1.2rem;
+}
+
+.member-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.directory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.directory-list .member-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.directory-list .member-card img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+.directory-list .member-card h2 {
+    flex: 1 1 180px;
+}
+
+.directory-list .member-card p {
+    margin: 0.25rem;
+}
+/* Accessible visually hidden content */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }

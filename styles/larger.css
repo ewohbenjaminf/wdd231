@@ -63,3 +63,21 @@
         padding: 1.5rem;
     }
 }
+/* Chamber Directory - Larger Screens */
+
+@media screen and (min-width: 700px) {
+    .directory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .directory-list .member-card {
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .directory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
