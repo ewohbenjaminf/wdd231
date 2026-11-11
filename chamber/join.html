@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for membership in the Port Harcourt Chamber of Commerce.">
+    <meta name="author" content="Ewoh Benjamin Friday">
+    <title>Join the Chamber | Port Harcourt Chamber of Commerce</title>
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="join.css">
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="join.js" defer></script> 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../images/logo.svg" alt="Chamber logo" class="logo">
+            <div>
+                <h1>Port Harcourt</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+        <button id="menu-button" aria-label="Open navigation menu">☰</button>
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active">Join</a>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h2>Chamber Membership Application</h2>
+        <p>Complete the form below to apply for membership.</p>
+
+        <div class="join-layout">
+            <form method="get" action="thankyou.html" class="join-form">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="firstName"
+                    title="Enter your first name" autocomplete="given-name" required>
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="lastName"
+                    title="Enter your last name" autocomplete="family-name" required>
+
+                <label for="organizational-title">Organizational Title</label>
+                <input type="text" id="organizational-title" name="organizationalTitle"
+                    title="Enter your organizational title (minimum seven characters)"
+                    autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
+                    required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                    title="Enter a valid email address" autocomplete="email"
+                    placeholder="example@email.com" required>
+
+                <label for="phone">Mobile Phone</label>
+                <input type="tel" id="phone" name="phone"
+                    title="Enter your mobile phone number"
+                    autocomplete="tel" required>
+
+                <label for="organization">Business or Organization Name</label>
+                <input type="text" id="organization" name="organization"
+                    title="Enter your business or organization name"
+                    autocomplete="organization" required>
+
+                <label for="membership">Membership Level</label>
+                <select id="membership" name="membership" required>
+                    <option value="">Select a membership level</option>
+                    <option value="NP">Non-Profit Membership</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+
+                <label for="description">Business Description</label>
+                <textarea id="description" name="description"
+                    title="Describe your business or organization"
+                    rows="5"></textarea>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit">Submit Membership Application</button>
+            </form>
+
+            <section class="membership-cards">
+                <h2>Membership Benefits</h2>
+                <div class="membership-card">
+                    <h3>Non-Profit</h3>
+                    <p>Networking and community participation opportunities.</p>
+                    <a href="#nonprofit">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Bronze</h3>
+                    <p>Access to chamber events and business networking.</p>
+                    <a href="#bronze">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Silver</h3>
+                    <p>Additional promotional and business development opportunities.</p>
+                    <a href="#silver">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Gold</h3>
+                    <p>Premium business visibility and advertising opportunities.</p>
+                    <a href="#gold">View Benefits</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Port Harcourt Chamber of Commerce</p>
+        <p>Oyigbo, Rivers State, Nigeria</p>
+        <p>&copy; <span id="current-year"></span> Port Harcourt Chamber of Commerce</p>
+    </footer>
+</body>
+</html>

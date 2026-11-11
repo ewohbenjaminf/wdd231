@@ -1,0 +1,268 @@
+
+/* W03 Chamber Home Page */
+
+:root {
+    --chamber-navy: #17324d;
+    --chamber-gold: #f4c95d;
+    --chamber-background: #f5f7fa;
+    --chamber-text: #202833;
+    --chamber-border: #cbd3dc;
+}
+
+body {
+    margin: 0;
+    color: var(--chamber-text);
+    background: var(--chamber-background);
+}
+
+/* Header and navigation */
+
+header {
+    background: var(--chamber-navy);
+}
+
+.brand {
+    color: #ffffff;
+}
+
+#primary-nav a {
+    color: #ffffff;
+}
+
+#primary-nav a:hover,
+#primary-nav a.active {
+    color: var(--chamber-navy);
+    background: var(--chamber-gold);
+}
+
+/* Main content */
+
+.home-main {
+    width: min(100% - 2rem, 1200px);
+    margin: 1.5rem auto;
+}
+
+.home-main section {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--chamber-border);
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.home-main h1,
+.home-main h2 {
+    color: var(--chamber-navy);
+}
+
+/* Hero section */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 260px;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+.hero-content {
+    padding: 1.5rem;
+    background: var(--chamber-navy);
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    border: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.join-button {
+    display: inline-block;
+    padding: 0.85rem 1.4rem;
+    border-radius: 6px;
+    background: var(--chamber-gold);
+    color: #172b40;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.join-button:hover {
+    background: #e5b93f;
+}
+
+/* Home page content grid */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.home-grid section {
+    margin: 0;
+    min-width: 0;
+}
+
+.home-grid h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--chamber-gold);
+}
+
+/* Events */
+
+.event-card {
+    padding: 0.75rem;
+    border-left: 4px solid var(--chamber-gold);
+    background: #f5f7fa;
+}
+
+.event-card h3 {
+    color: var(--chamber-navy);
+}
+
+/* Weather */
+
+.weather-current {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-current img {
+    width: 75px;
+    height: 75px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.forecast-day {
+    padding: 0.5rem;
+    border: 1px solid var(--chamber-border);
+    border-radius: 6px;
+}
+
+.forecast-day img {
+    width: 45px;
+    height: 45px;
+}
+
+.weather-message {
+    font-size: 0.9rem;
+}
+
+/* Company spotlights */
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    padding: 1rem;
+    border: 1px solid var(--chamber-border);
+    border-radius: 8px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.spotlight-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.spotlight-card h3 {
+    color: var(--chamber-navy);
+}
+
+.membership-level {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    background: var(--chamber-gold);
+    color: #172b40;
+    font-weight: 700;
+}
+
+.spotlight-card a {
+    color: #17324d;
+    font-weight: 700;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    background: var(--chamber-navy);
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/* Larger screens */
+
+@media screen and (min-width: 700px) {
+    .home-main {
+        width: min(100% - 3rem, 1200px);
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        width: min(48%, 550px);
+        padding: 1.5rem;
+        border-radius: 8px;
+        background: rgb(23 50 77 / 90%);
+        transform: translateY(-50%);
+    }
+
+    .home-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .spotlights-section {
+        grid-column: 1 / -1;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .home-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .spotlights-section {
+        grid-column: auto;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+    }
+}

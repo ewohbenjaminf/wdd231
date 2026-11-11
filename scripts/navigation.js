@@ -1,3 +1,4 @@
+
 // WDD 231 - Responsive Navigation
 
 const menuButton = document.querySelector("#menu-button");
