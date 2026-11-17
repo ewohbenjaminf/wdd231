@@ -24,12 +24,19 @@
                 <p>Chamber of Commerce</p>
             </div>
         </div>
-        <button id="menu-button" aria-label="Open navigation menu">☰</button>
-        <nav id="navigation">
-            <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
-        </nav>
+        <button id="menu-button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-nav">
+    &#9776;
+</button>
+
+<nav id="primary-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Chamber</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
+</nav>
     </header>
 
     <main class="join-main">

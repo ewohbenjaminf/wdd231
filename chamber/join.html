@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,12 +25,19 @@
                 <p>Chamber of Commerce</p>
             </div>
         </div>
-        <button id="menu-button" aria-label="Open navigation menu">☰</button>
-        <nav id="navigation">
-            <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html" class="active">Join</a>
-        </nav>
+      <button id="menu-button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-nav">
+    &#9776;
+</button>
+
+<nav id="primary-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Chamber</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html" class="active">Join</a>
+</nav>
     </header>
 
     <main class="join-main">
@@ -46,11 +54,11 @@
                 <input type="text" id="last-name" name="lastName"
                     title="Enter your last name" autocomplete="family-name" required>
 
-                <label for="organizational-title">Organizational Title</label>
-                <input type="text" id="organizational-title" name="organizationalTitle"
-                    title="Enter your organizational title (minimum seven characters)"
-                    autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
-                    required>
+               <label for="organizational-title">Organizational Title</label>
+<input type="text" id="organizational-title" name="organizationalTitle"
+    title="Enter your organizational title (minimum seven characters)"
+    autocomplete="organization-title" pattern="[A-Za-z][A-Za-z -]{5,}[A-Za-z]"
+    required>
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email"
@@ -67,14 +75,14 @@
                     title="Enter your business or organization name"
                     autocomplete="organization" required>
 
-                <label for="membership">Membership Level</label>
-                <select id="membership" name="membership" required>
-                    <option value="">Select a membership level</option>
-                    <option value="NP">Non-Profit Membership</option>
-                    <option value="Bronze">Bronze Membership</option>
-                    <option value="Silver">Silver Membership</option>
-                    <option value="Gold">Gold Membership</option>
-                </select>
+               <label for="membership">Membership Level</label>
+<select id="membership" name="membership" required>
+    <option value="">Select a membership level</option>
+    <option value="np">Non-Profit Membership</option>
+    <option value="bronze">Bronze Membership</option>
+    <option value="silver">Silver Membership</option>
+    <option value="gold">Gold Membership</option>
+</select>
 
                 <label for="description">Business Description</label>
                 <textarea id="description" name="description"
