@@ -6,6 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Apply for membership in the Port Harcourt Chamber of Commerce.">
+
+    <meta property="og:title" content="Join the Port Harcourt Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership and discover business opportunities in Port Harcourt.">
+    <meta property="og:image" content="https://ewohbenjaminf.github.io/wdd231/images/chamber-hero.webp">
+    <meta property="og:url" content="https://ewohbenjaminf.github.io/wdd231/chamber/join.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <meta name="author" content="Ewoh Benjamin Friday">
     <title>Join the Chamber | Port Harcourt Chamber of Commerce</title>
     <link rel="icon" href="../images/logo.svg">
@@ -20,10 +29,10 @@
     <header>
         <div class="header-content">
             <img src="../images/logo.svg" alt="Chamber logo" class="logo">
-            <div>
-                <h1>Port Harcourt</h1>
-                <p>Chamber of Commerce</p>
-            </div>
+           <div>
+    <p class="site-name">Port Harcourt</p>
+    <p>Chamber of Commerce</p>
+</div>
         </div>
       <button id="menu-button"
         aria-label="Open navigation menu"
@@ -41,7 +50,7 @@
     </header>
 
     <main class="join-main">
-        <h2>Chamber Membership Application</h2>
+       <h1>Chamber Membership Application</h1>
         <p>Complete the form below to apply for membership.</p>
 
         <div class="join-layout">
@@ -117,6 +126,33 @@
                     <a href="#gold">View Benefits</a>
                 </div>
             </section>
+                        <dialog id="nonprofit-dialog">
+                <h2>Non-Profit Membership Benefits</h2>
+                <p>Enjoy networking and community participation opportunities.</p>
+                <p>Connect with local organizations and participate in community initiatives.</p>
+                <button class="close-dialog">Close</button>
+            </dialog>
+
+            <dialog id="bronze-dialog">
+                <h2>Bronze Membership Benefits</h2>
+                <p>Enjoy access to chamber events and business networking.</p>
+                <p>Connect with other businesses and participate in chamber activities.</p>
+                <button class="close-dialog">Close</button>
+            </dialog>
+
+            <dialog id="silver-dialog">
+                <h2>Silver Membership Benefits</h2>
+                <p>Enjoy additional promotional and business development opportunities.</p>
+                <p>Receive enhanced visibility and opportunities to promote your business.</p>
+                <button class="close-dialog">Close</button>
+            </dialog>
+
+            <dialog id="gold-dialog">
+                <h2>Gold Membership Benefits</h2>
+                <p>Enjoy premium business visibility and advertising opportunities.</p>
+                <p>Receive priority promotional opportunities and enhanced chamber exposure.</p>
+                <button class="close-dialog">Close</button>
+            </dialog>
         </div>
     </main>
 

@@ -16,3 +16,27 @@ timestampField.value = new Date().toISOString();
 applicationForm.addEventListener("submit", function () {
     timestampField.value = new Date().toISOString();
 });
+// Membership dialog functionality
+const membershipLinks = document.querySelectorAll(".membership-card a");
+
+membershipLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const dialogId = link.getAttribute("href").replace("#", "") + "-dialog";
+        const dialog = document.getElementById(dialogId);
+
+        if (dialog) {
+            dialog.showModal();
+        }
+    });
+});
+
+// Close membership dialogs
+const closeButtons = document.querySelectorAll(".close-dialog");
+
+closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        button.closest("dialog").close();
+    });
+});
