@@ -3,6 +3,10 @@
 document.querySelector("#current-year").textContent =
     new Date().getFullYear();
 
+// Display the page's last modified date and time
+document.querySelector("#last-modified").textContent =
+    `Last Modified: ${document.lastModified}`;
+
 // Get the membership application form
 const applicationForm = document.querySelector(".join-form");
 
