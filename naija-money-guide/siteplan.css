@@ -1,0 +1,443 @@
+
+/* Naija Money Guide - W05 Site Plan */
+
+:root {
+    --deep-green: #14532D;
+    --warm-gold: #D4A017;
+    --soft-off-white: #F8FAF5;
+    --dark-charcoal: #222222;
+    --white: #FFFFFF;
+    --light-green: #E8F1E9;
+    --border-color: #D9E2D9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--soft-off-white);
+    color: var(--dark-charcoal);
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.site-header {
+    background-color: var(--deep-green);
+    color: var(--white);
+    padding: 1rem 5%;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--warm-gold);
+    color: var(--deep-green);
+    font-weight: 800;
+}
+
+.document-label {
+    color: #F5E8B8;
+    font-size: 0.85rem;
+}
+
+.page-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.hero {
+    padding: 3rem 0 2rem;
+    border-bottom: 3px solid var(--warm-gold);
+}
+
+.eyebrow {
+    color: var(--deep-green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin: 0.5rem 0;
+    color: var(--deep-green);
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.hero-copy {
+    max-width: 760px;
+    font-size: 1.1rem;
+}
+
+.hero-meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.hero-meta span {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: var(--white);
+    font-size: 0.85rem;
+}
+
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 1.5rem 0;
+}
+
+.section-nav a {
+    color: var(--deep-green);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.45rem 0.75rem;
+    border-radius: 5px;
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    background-color: var(--deep-green);
+    color: var(--white);
+}
+
+.plan-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 1rem;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: var(--deep-green);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.65rem;
+}
+
+.section-number {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--warm-gold);
+    color: var(--deep-green);
+    font-weight: 800;
+}
+
+.content-card,
+.scenario-card,
+.color-item,
+.type-card,
+.wireframe-card {
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.content-card h3,
+.scenario-card h3,
+.type-card h3,
+.wireframe-card h3 {
+    margin-top: 0;
+    color: var(--deep-green);
+    font-family: "Poppins", sans-serif;
+}
+
+.content-card ul {
+    padding-left: 1.3rem;
+}
+
+.domain-note {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 4px solid var(--warm-gold);
+    background-color: var(--light-green);
+}
+
+.audience-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.audience-strip span {
+    padding: 0.4rem 0.7rem;
+    border-radius: 5px;
+    background-color: var(--light-green);
+    color: var(--deep-green);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.scenario-grid,
+.color-grid,
+.type-grid,
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.scenario-icon {
+    font-size: 1.7rem;
+}
+
+.scenario-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.swatch {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    border: 1px solid #BBBBBB;
+    border-radius: 8px;
+}
+
+.swatch-green {
+    background-color: var(--deep-green);
+}
+
+.swatch-gold {
+    background-color: var(--warm-gold);
+}
+
+.swatch-cream {
+    background-color: var(--soft-off-white);
+}
+
+.swatch-charcoal {
+    background-color: var(--dark-charcoal);
+}
+
+.color-item h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.color-item p {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
+
+.contrast-note {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--light-green);
+}
+
+.type-role {
+    color: var(--deep-green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-opensans {
+    font-family: "Open Sans", sans-serif;
+}
+
+.sample-heading {
+    color: var(--deep-green);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.sample-body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.wireframe-intro {
+    margin-bottom: 1rem;
+}
+
+.wireframe-card {
+    overflow: hidden;
+}
+
+.wireframe {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border: 2px solid var(--dark-charcoal);
+    background-color: var(--white);
+    color: var(--dark-charcoal);
+}
+
+.wireframe-block {
+    display: grid;
+    place-items: center;
+    min-height: 38px;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem;
+    border: 1px solid var(--dark-charcoal);
+    background-color: #F0F0F0;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.wireframe-block:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-wireframe {
+    max-width: 230px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 18px;
+}
+
+.mobile-wireframe .hero-block {
+    min-height: 95px;
+}
+
+.mobile-wireframe .card-block {
+    min-height: 65px;
+}
+
+.desktop-wireframe .desktop-nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.3rem;
+}
+
+.desktop-wireframe .desktop-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.desktop-wireframe .desktop-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.desktop-wireframe .desktop-hero .wireframe-block {
+    min-height: 100px;
+}
+
+.desktop-wireframe .desktop-cards .wireframe-block {
+    min-height: 75px;
+}
+
+.wireframe-key {
+    margin-top: 1rem;
+    color: #555555;
+    font-size: 0.85rem;
+}
+
+.site-footer {
+    padding: 1.5rem 5%;
+    background-color: var(--deep-green);
+    color: var(--white);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 650px) {
+    .page-shell {
+        padding: 1.25rem 4%;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero {
+        padding-top: 2rem;
+    }
+
+    .scenario-grid,
+    .color-grid,
+    .type-grid,
+    .wireframe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 1.35rem;
+    }
+
+    .color-item {
+        align-items: flex-start;
+    }
+
+    .desktop-wireframe .desktop-nav {
+        flex-wrap: wrap;
+    }
+}
+
+.brand a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand a:hover,
+.brand a:focus {
+    color: var(--warm-gold);
+}
