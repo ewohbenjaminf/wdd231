@@ -4,25 +4,28 @@ import { discoverItems } from "../data/discover.mjs";
 const discoverGrid = document.querySelector("#discover-grid");
 const visitMessage = document.querySelector("#visit-message");
 
+
 function displayDiscoverItems(items) {
-    discoverGrid.innerHTML = items.map(item => `
-        <article class="discover-card">
-            <figure>
-                <img src="${item.image}"
-                     alt="${item.imageAlt}"
-                     loading="lazy"
-                     width="400"
-                     height="300">
-            </figure>
-            <div class="discover-card-content">
-                <h2>${item.name}</h2>
-                <address>${item.address}</address>
-                <p>${item.description}</p>
-                <a href="${item.link}" target="_blank"
-                   rel="noopener noreferrer">View Location</a>
-            </div>
-        </article>
-    `).join("");
+    discoverGrid.innerHTML = `
+        ${items.map(item => `
+            <article class="discover-card">
+                <figure>
+                    <img src="${item.image}"
+                         alt="${item.imageAlt}"
+                         loading="lazy"
+                         width="400"
+                         height="300">
+                </figure>
+                <div class="discover-card-content">
+                    <h2>${item.name}</h2>
+                    <address>${item.address}</address>
+                    <p>${item.description}</p>
+                    <a href="${item.link}" target="_blank"
+                       rel="noopener noreferrer">View Location</a>
+                </div>
+            </article>
+        `).join("")}
+    `;
 }
 
 function displayVisitMessage() {
