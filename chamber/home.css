@@ -1,29 +1,7 @@
-
+﻿
 /* W03 Chamber Home Page */
 
-:root {
-    --chamber-navy: #17324d;
-    --chamber-gold: #f4c95d;
-    --chamber-background: #f5f7fa;
-    --chamber-text: #202833;
-    --chamber-border: #cbd3dc;
-}
-
-body {
-    margin: 0;
-    color: var(--chamber-text);
-    background: var(--chamber-background);
-}
-
 /* Header and navigation */
-
-header {
-    background: var(--chamber-navy);
-}
-
-.brand {
-    color: #ffffff;
-}
 
 #primary-nav a {
     color: #ffffff;
@@ -31,8 +9,8 @@ header {
 
 #primary-nav a:hover,
 #primary-nav a.active {
-    color: var(--chamber-navy);
-    background: var(--chamber-gold);
+    color: var(--primary-color);
+    background: var(--accent-color);
 }
 
 /* Main content */
@@ -45,14 +23,14 @@ header {
 .home-main section {
     margin-bottom: 1.5rem;
     padding: 1.25rem;
-    border: 1px solid var(--chamber-border);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     background: #ffffff;
 }
 
 .home-main h1,
 .home-main h2 {
-    color: var(--chamber-navy);
+    color: var(--primary-color);
 }
 
 /* Hero section */
@@ -102,7 +80,7 @@ header {
     display: inline-block;
     padding: 0.85rem 1.4rem;
     border-radius: 6px;
-    background: var(--chamber-gold);
+    background: var(--accent-color);
     color: #172b40;
     font-weight: 700;
     text-decoration: none;
@@ -127,19 +105,19 @@ header {
 
 .home-grid h2 {
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--chamber-gold);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 /* Events */
 
 .event-card {
     padding: 0.75rem;
-    border-left: 4px solid var(--chamber-gold);
+    border-left: 4px solid var(--accent-color);
     background: #f5f7fa;
 }
 
 .event-card h3 {
-    color: var(--chamber-navy);
+    color: var(--primary-color);
 }
 
 /* Weather */
@@ -165,7 +143,7 @@ header {
 
 .forecast-day {
     padding: 0.5rem;
-    border: 1px solid var(--chamber-border);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
 }
 
@@ -188,7 +166,7 @@ header {
 
 .spotlight-card {
     padding: 1rem;
-    border: 1px solid var(--chamber-border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     text-align: center;
     overflow-wrap: anywhere;
@@ -201,14 +179,14 @@ header {
 }
 
 .spotlight-card h3 {
-    color: var(--chamber-navy);
+    color: var(--primary-color);
 }
 
 .membership-level {
     display: inline-block;
     padding: 0.35rem 0.75rem;
     border-radius: 20px;
-    background: var(--chamber-gold);
+    background: var(--accent-color);
     color: #172b40;
     font-weight: 700;
 }
@@ -225,16 +203,9 @@ header {
 
 /* Footer */
 
-footer {
+.home-main + footer {
     margin-top: 2rem;
-    background: var(--chamber-navy);
-    color: #ffffff;
 }
-
-footer a {
-    color: #ffffff;
-}
-
 /* Larger screens */
 
 @media screen and (min-width: 700px) {
@@ -279,3 +250,4 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
